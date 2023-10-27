@@ -1,0 +1,30 @@
+name: "Agile Bets"
+description: "File predictions and markets to bet on project management"
+author: "Quinn Dougherty <quinnd@riseup.net>"
+inputs:
+  repo-token:
+    description: "The GH_TOKEN secret can be passed in using {{ secrets.GH_TOKEN }}"
+    required: true
+  manifold-key:
+    description: "Pass api key from fatebook.io/api-setup and pass it to {{ secrets.MANIFOLD_API_TOKEN }}"
+    required: false
+  assignee:
+    description: "GH username of the assignee"
+    required: true
+  ticket-number:
+    description: "The issue or PR number"
+    required: true
+  ticket-name:
+    description: "The title of the issue or PR"
+    required: true
+  close:
+    description: |
+      A number of days or weeks. This determines when the prediction resolves. Syntax: 1d, 2w
+    required: false
+    default: "2w"
+runs:
+  using: "node20"
+  main: "dist/main.js"
+branding:
+  icon: "cpu"
+  color: "blue"
