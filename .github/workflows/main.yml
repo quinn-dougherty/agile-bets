@@ -1,6 +1,0 @@
-name: Agile Bets
-on:
-  issues:
-    types: [assigned]
-  pull_request:
-    types: [assigned]

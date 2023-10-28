@@ -9,9 +9,6 @@ inputs:
     description: "Tighten down read access on fatebook (defaults to public)"
     required: false
     default: false
-  manifold-key:
-    description: "Pass api key from fatebook.io/api-setup and pass it to {{ secrets.MANIFOLD_API_TOKEN }}"
-    required: false
   repo-token:
     description: "The GH_TOKEN secret can be passed in using {{ secrets.GH_TOKEN }}"
     required: true
@@ -31,7 +28,7 @@ inputs:
     required: false
 runs:
   using: "node20"
-  main: "dist/index.js"
+  main: "./../dist/index.js"
 branding:
   icon: "cpu"
   color: "blue"

@@ -2,4 +2,4 @@
 
 with pkgs;
 
-mkShell { buildInputs = [ typescript nodejs nodePackages.eslint ]; }
+mkShell { buildInputs = [ typescript nodejs nodePackages.eslint curl jq ]; }
