@@ -1,0 +1,23 @@
+name: Check Assign Action
+
+on:
+  issues:
+    types: [assigned]
+  pull_request:
+    types: [assigned]
+
+jobs:
+  check-assign-action:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check if action is assigned
+      run: |
+        EVENT_PAYLOAD=$(cat $GITHUB_EVENT_PATH)
+        echo "$EVENT_PAYLOAD" | jq .action
+        if [[ "$(echo "$EVENT_PAYLOAD" | jq -r .action)" == "assigned" ]]; then
+          echo "This was an assigned action!"
+        else
+          echo "This was not an assigned action."
+        fi
+      env:
+        GITHUB_EVENT_PATH: ${{ github.event_path }}
