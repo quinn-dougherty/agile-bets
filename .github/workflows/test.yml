@@ -12,6 +12,6 @@ jobs:
     steps:
     - name: log a bunch of stuff.
       run: |
-        echo "github repository: ${{ github.repository }}"
-        echo "github user: ${{ github.user }}"
+        echo "github repository: $(basename ${{ github.repository }})"
+        echo "github user: ${{ github.username }}"
         echo "github even space: ${{ github.event }}"
