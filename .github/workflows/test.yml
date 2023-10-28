@@ -10,14 +10,8 @@ jobs:
   check-assign-action:
     runs-on: ubuntu-latest
     steps:
-    - name: Check if action is assigned
+    - name: log a bunch of stuff.
       run: |
-        EVENT_PAYLOAD=$(cat $GITHUB_EVENT_PATH)
-        echo "$EVENT_PAYLOAD" | jq .action
-        if [[ "$(echo "$EVENT_PAYLOAD" | jq -r .action)" == "assigned" ]]; then
-          echo "This was an assigned action!"
-        else
-          echo "This was not an assigned action."
-        fi
-      env:
-        GITHUB_EVENT_PATH: ${{ github.event_path }}
+        echo "github repository: ${{ github.repository }}"
+        echo "github user: ${{ github.user }}"
+        echo "github even space: ${{ github.event }}"
