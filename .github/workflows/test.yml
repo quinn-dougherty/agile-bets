@@ -1,4 +1,4 @@
-name: Check Assign Action
+name: log gh env vars
 
 on:
   issues:
