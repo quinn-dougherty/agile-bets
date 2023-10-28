@@ -14,4 +14,4 @@ jobs:
       run: |
         echo "github repository: $(basename ${{ github.repository }})"
         echo "github user: $(dirname ${{ github.repository }})"
-        echo "github event space: $(jq ${{ github.event }})"
+        echo "github event type: ${{ github.event_type }}"
