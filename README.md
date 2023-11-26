@@ -1,3 +1,5 @@
+Given a one-day hackathon pass, turned out to be more of a three day thing. Currently abandoned.
+
 # Agile Bets Action (incomplete)
 
 Certainly not feature complete, and not the UX it could be. Also might break, and might not ever get reasonably finished.

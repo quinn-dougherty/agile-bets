@@ -24,7 +24,7 @@ inputs:
     default: "2w"
 runs:
   using: "node20"
-  main: ./main.sh --manifold-key=${{ secrets.MANIFOLD_API_TOKEN }} #  "./../dist/index.js"
+  main: ./../dist/index.js --manifold-key=${{ secrets.MANIFOLD_API_TOKEN }} #  "./../dist/index.js"
 branding:
   icon: "cpu"
   color: "blue"
